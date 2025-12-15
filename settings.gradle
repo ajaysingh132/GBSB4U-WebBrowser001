@@ -1,1 +1,3 @@
 
+rootProject.name = "GBSB4U-WebBrowser"
+include(":app")
