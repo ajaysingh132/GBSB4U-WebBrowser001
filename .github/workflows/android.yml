@@ -19,10 +19,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Install Gradle
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gradle
+
       - name: Build Debug APK
         run: |
-          chmod +x gradlew || true
-          ./gradlew assembleDebug || gradle assembleDebug
+          gradle assembleDebug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
