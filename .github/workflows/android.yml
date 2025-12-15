@@ -36,3 +36,9 @@ jobs:
         with:
           name: GBSB4U-WebBrowser-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+- name: Download Gradle Wrapper JAR
+        run: |
+          mkdir -p gradle/wrapper
+          curl -L https://raw.githubusercontent.com/gradle/gradle/v8.2.1/gradle/wrapper/gradle-wrapper.jar \
+          -o gradle/wrapper/gradle-wrapper.jar
+          
