@@ -1,1 +1,31 @@
+plugins {
+    id "com.android.application"
+}
 
+android {
+    namespace "com.gbsb4u.webbrowser"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gbsb4u.webbrowser"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // No external dependencies needed
+}
